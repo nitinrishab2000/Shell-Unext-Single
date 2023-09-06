@@ -6,14 +6,24 @@
 				"name": "Filter1",
 				"type": "Filter",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('DataArray')",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@not(equals(item(),'ccc'))",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"variables": {
 			"DataArray": {
 				"type": "Array",
 				"defaultValue": [
-					"[\"aaa\"",
+					"aaa",
 					"bbb",
 					"ccc",
 					"dddd"
